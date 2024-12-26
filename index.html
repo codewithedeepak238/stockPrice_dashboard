@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js" defer></script>
+    <title>Stock Tracker Dashboard</title>
+
+</head>
+
+<body>
+    <div>
+        <div class="py-[1.5%] bg-black text-white text-3xl font-[500] text-center">
+            <header>
+                <h1>Stock Tracker Dashboard</h1>
+            </header>
+        </div>
+        <div class="pt-[1%]">
+            <div class="search-bar text-center">
+                <p class="text-2xl font-[600]">Select Trending Stock</p>
+            </div>
+            <div class="">
+                <div class="py-[1%] flex items-center justify-center gap-[8px]">
+                    <select class="border-[2px] border-black px-[5px] py-[1px] w-[200px]" name="stocks" id="stocks">
+                        <option value="MSFT">MSFT</option>
+                        <option value="IBM">IBM</option>
+                        <option value="NVDA">NVDA</option>
+                        <option value="INTC">INTC</option>
+                        <option value="AGCO">AGCO</option>
+                        <option value="BZFD">BZFD</option>
+                    </select>
+                    <button class="bg-green-500 text-white px-[5px] py-[3px]">Load Stock</button>
+                </div>
+                <div class="flex items-center justify-center gap-[8px]">
+                    <input class="border-[2px] border-black rounded-none px-[5px] py-[1px] w-[200px]" type="text"
+                        placeholder="Search for stocks...">
+                    <button class="bg-green-500 text-white px-[10px] py-[3px]">Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="hero px-[2%]">
+            <div class="pb-[1%]">
+                <p class="text-2xl font-[500]">Stock Information</p>
+                <p id="stockName"></p>
+                <p>Price: <span id="stockPrice"></span></p>
+                <p>Change: <span id="stockChange"></span></p>
+                <p>Volume: <span id="stockVolume"></span></p>
+            </div>
+            <div>
+                <p class="text-2xl font-[500]">Stock Price Graph</p>
+                <div class="">
+                    <canvas width="400" height="100" id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
